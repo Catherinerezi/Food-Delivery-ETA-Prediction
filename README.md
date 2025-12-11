@@ -37,6 +37,7 @@ Before any machine learning, we enrich, clean, and make sense of the columns so 
 | `Speed_km_per_min`       | `float`     | Derived: `Distance_km / Delivery_Time_min`               | Post-hoc feature to understand realistic speeds; care taken with division by zero               |
 | `Prep_per_km`            | `float`     | Derived: `Preparation_Time_min / Distance_km`            | Helps compare prep effort relative to distance                                                  |
 | `Weather_Time`           | `category`  | Combined label: `Weather` + `Time_of_Day`                | Captures joint effects like “Rainy_Evening” vs “Clear_Morning”                                  |
+
 **General quality checks & preprocessing rules**
 Before any model tries to learn from the data, the app performs a series of sensible, leak-proof steps:
 - Type fixing and cleaning
