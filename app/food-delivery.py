@@ -1112,31 +1112,3 @@ donut_chart = (
 )
 st.altair_chart(donut_chart, use_container_width=False)
 st.write(f"**% within ±{TOL_MIN} menit:** {pct_within:.1f}%")
-
-# Folder Artifacts (opsional di Streamlit)
-st.header("Folder Artifacts (opsional)")
-
-ART = None
-for k in list(globals().keys()):
-    if isinstance(globals()[k], str) and k.startswith("ART") and os.path.isdir(
-        globals()[k]
-    ):
-        ART = globals()[k]
-        break
-
-if ART is None:
-    ART = f"artifacts_{dt.datetime.now().strftime('%Y%m%d-%H%M%S')}"
-    try:
-        os.makedirs(ART, exist_ok=True)
-        st.info(f"Folder artifacts dibuat: `{ART}` (di environment server).")
-    except Exception as e:
-        st.warning(f"Gagal membuat folder artifacts (boleh diabaikan untuk Streamlit): {e}")
-else:
-    st.info(f"Menggunakan folder artifacts: `{ART}`")
-
-st.markdown(
-    """
-> **Catatan**: Di environment Streamlit, folder ini tidak selalu mudah diakses user,
-> tapi bagian *garis besar* `Folder Artifacts` tetap dipertahankan sesuai notebook.
-"""
-)
