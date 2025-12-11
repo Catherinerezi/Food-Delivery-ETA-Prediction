@@ -39,6 +39,7 @@ Before any machine learning, we enrich, clean, and make sense of the columns so 
 | `Weather_Time`           | `category`  | Combined label: `Weather` + `Time_of_Day`                | Captures joint effects like “Rainy_Evening” vs “Clear_Morning”                                  |
 
 **General quality checks & preprocessing rules**
+
 Before any model tries to learn from the data, the app performs a series of sensible, leak-proof steps:
 - Type fixing and cleaning
   - Strip extra spaces from text (" High " → "High").
