@@ -124,12 +124,12 @@ This ensures that anything you see in the app—charts, metrics, feature importa
   - Duplicate and missing-value counts both before and after cleaning, showing how much preparation is needed.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Before%20Cleaning%20Data.png" alt="Before Data Cleaning" width="1000">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Before%20Cleaning%20Data.png" alt="Before Data Cleaning" width="500">
   Before Data Cleaning
 </p>
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/After%20Data%20Cleaning.png" alt="Before Data Cleaning" width="1000">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/After%20Data%20Cleaning.png" alt="Before Data Cleaning" width="500">
   After Data Cleaning
 </p>
 
