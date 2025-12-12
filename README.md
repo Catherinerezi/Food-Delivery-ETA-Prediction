@@ -183,3 +183,19 @@ This ensures that anything you see in the app—charts, metrics, feature importa
   - Implements compute_pdp_1d to vary one numeric feature between its 5th and 95th percentile, recomputing average predictions to obtain a one-dimensional PDP.
   - Displays PDP lines for chosen features such as 'Distance_km', 'Preparation_Time_min', or 'Courier_Experience_yrs'.
   - Applies time-based features, interaction terms, and engineered ratios, refits 'best_pipe' on the enriched data, and reports whether MAE improves, using a success or warning message in the app.
+
+**What does this reveal about the model in practice?**
+- Users can see _"Which features the model relies on most?"_ both from exploratory and final feature-importance views, building confidence that drivers like distance, preparation time, traffic, and time-of-day are being used in a meaningful way.
+
+<p align="center">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Intrinsic%20Importance%20%3A%20Coefficients.png" alt="Intrinsic Importance" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Permutation%20importance.png" alt="Permutation Importance" width="1000">
+</p>
+
+- Parity and residual plots show whether predictions track the actual values reasonably well and whether errors are roughly centred rather than systematically biased.
+- Segment-level error tables and charts reveal _"Where the model struggles most?"_ for example: under heavy traffic, specific weather conditions, or certain times of day—turning abstract error metrics into concrete operational scenarios.
+- PDP curves expose how predicted delivery time responds when individual features change, helping validate whether the model’s behaviour follows realistic patterns.
+- The comparison of MAE before and after feature engineering shows whether additional domain logic genuinely improves performance, grounding the modelling decisions in measurable gains.
