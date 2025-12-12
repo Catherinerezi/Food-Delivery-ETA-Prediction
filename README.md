@@ -196,6 +196,21 @@ This ensures that anything you see in the app—charts, metrics, feature importa
 </p>
 
 - Parity and residual plots show whether predictions track the actual values reasonably well and whether errors are roughly centred rather than systematically biased.
+
+<p align="center">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Parity%20Plot.png" alt="Parity Plot" width="1000">
+</p>
+
 - Segment-level error tables and charts reveal _"Where the model struggles most?"_ for example: under heavy traffic, specific weather conditions, or certain times of day—turning abstract error metrics into concrete operational scenarios.
+
+<p align="center">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Error%20per%20Segment.png" alt="Error per Segment" width="1000">
+</p>
+
 - PDP curves expose how predicted delivery time responds when individual features change, helping validate whether the model’s behaviour follows realistic patterns.
+
+<p align="center">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/PDP.png" alt="PDP" width="1000">
+</p>
+
 - The comparison of MAE before and after feature engineering shows whether additional domain logic genuinely improves performance, grounding the modelling decisions in measurable gains.
