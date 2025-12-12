@@ -61,4 +61,22 @@ This ensures that anything you see in the app—charts, metrics, feature importa
 # Attachment
 - [Data Processing](https://colab.research.google.com/drive/1vzjrYL14UJxsd2FptWBJTCzvRgBI1B0A)
 
-# What We Bring To The Table?
+# What We Bring To The Table? 
+
+## Why the Model Is Useful (via “minutes within tolerance”)?
+
+**What are we trying to answer here?**
+- The app does not stop at MAE/RMSE; it explicitly measures how many orders have prediction errors within a chosen number of minutes.
+- This “minutes within tolerance” view answers a practical question: “In reality, how often does our ETA land close enough to be acceptable?”
+- It turns the model from a purely statistical object into an operational signal of reliability.
+
+**How do we do this in code?**
+- Several model families (Ridge, Lasso, Decision Tree, Random Forest, and XGBoost when available) are trained and tuned using GridSearchCV with MAE as the main scoring metric, all under consistent preprocessing pipelines (preprocess_linear and preprocess_tree).
+- The pipeline with the best cross validated MAE is chosen as best_pipe and then refitted with engineered features on X_train_fe, y_train (time-of-day encodings, trigonometric time features, traffic × distance and weather × prep interactions, speed, and prep-per-km).
+- Using this final model (final_model), the app generates predictions for both train and test (y_tr_pred, y_te_pred) and summarises MAE, RMSE, and R² for each split in df_final_eval.
+- On top of that, it computes for each test order whether |y_test − y_te_pred| falls within a user-selected tolerance window, producing a minutes-within-tolerance metric on unseen data.
+
+**What do we actually get out of it?**
+- A final evaluation table clearly reports Train vs Test MAE, RMSE, and R² after tuning and feature engineering, making it easy to see whether the model generalises beyond the training set.
+- From the same predictions, the minutes-within-tolerance metric is derived, providing a direct measure of how often ETA errors stay inside the chosen window on the test set.
+- Together, these outputs show that the model is not only numerically strong, but also structured to support a reliability view that can be used later as the basis for ETA evaluation.
