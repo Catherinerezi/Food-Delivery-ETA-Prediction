@@ -80,14 +80,14 @@ This ensures that anything you see in the app—charts, metrics, feature importa
 - A final evaluation table clearly reports Train vs Test MAE, RMSE, and R² after tuning and feature engineering, making it easy to see whether the model generalises beyond the training set.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Tabel%20perbandingan%20model.png" alt="Tabel Perbandingan" width="1000">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Tabel%20perbandingan%20model.png" alt="Tabel Perbandingan" width="1000">
 </p>
 
 - From the same predictions, the minutes-within-tolerance metric is derived, providing a direct measure of how often ETA errors stay inside the chosen window on the test set.
 - Together, these outputs show that the model is not only numerically strong, but also structured to support a reliability view that can be used later as the basis for ETA evaluation.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Visualisasi%20pemodelan%20terbaik.png" alt="Visualisasi Perbandingan" width="1000">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Visualisasi%20pemodelan%20terbaik.png" alt="Visualisasi Perbandingan" width="1000">
 </p>
 
 ## How Big the Problem Is (the shape of delivery times & data quality)?
@@ -124,13 +124,13 @@ This ensures that anything you see in the app—charts, metrics, feature importa
   - Duplicate and missing-value counts both before and after cleaning, showing how much preparation is needed.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Before%20Cleaning%20Data.png"
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Before%20Cleaning%20Data.png"
     alt="Before Data Cleaning" width="500"><br>
   Before Data Cleaning
 </p>
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/After%20Data%20Cleaning.png" 
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/After%20Data%20Cleaning.png" 
     alt="Before Data Cleaning" width="500"><br>
   After Data Cleaning
 </p>
@@ -139,7 +139,7 @@ This ensures that anything you see in the app—charts, metrics, feature importa
   - Where most deliveries cluster in time.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Target%20Distribution.png" alt="Target Distribution" width="1000">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Target%20Distribution.png" alt="Target Distribution" width="1000">
 </p>
 
   - How frequent very short or very long deliveries are.
@@ -147,5 +147,5 @@ This ensures that anything you see in the app—charts, metrics, feature importa
 - Correlation and boxplot views highlight _"Which features seem most related to delivery time?"_ and _"How different categories shift the target, framing, and how difficult the prediction task is even before any model is trained?"_.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Correlation%20Within%20Target.png" alt="Correlation Within Target" width="1000">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/assets/Correlation%20within%20target.png" alt="Correlation Within Target" width="1000">
 </p>
