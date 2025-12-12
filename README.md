@@ -141,11 +141,11 @@ This ensures that anything you see in the app—charts, metrics, feature importa
   - Whether the target distribution is roughly tight or strongly skewed.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Target%20Distribution.png" alt="Target Distribution" width="1000">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Target%20Distribution.png" alt="Target Distribution" width="500">
 </p>
 
 - Correlation and boxplot views highlight _"Which features seem most related to delivery time?"_ and _"How different categories shift the target, framing, and how difficult the prediction task is even before any model is trained?"_.
 
 <p align="center">
-  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Correlation%20Within%20Target.png" alt="Correlation Within Target" width="1000">
+  <img src="https://github.com/Catherinerezi/Food-Delivery-ETA-Prediction/blob/main/aseets/Correlation%20Within%20Target.png" alt="Correlation Within Target" width="500">
 </p>
